@@ -1,0 +1,25 @@
+server:
+  port: 8080
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: ${POSTGRES_URL:jdbc:postgresql://localhost:5432/spring-study}
+    username: ${POSTGRES_USER:postgres}
+    password: ${POSTGRES_PASSWORD:password}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+open:
+  api:
+    title: ${API_TITLE:DUMMY-API-TITLE}
+    version: v1.0.0
+    description: API dev service description
+    serverUrl: http://localhost:${server.port}
+    serverName: Dev server

@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: spring-study
+  profiles:
+    active: @spring.profiles.active@
